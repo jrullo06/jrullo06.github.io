@@ -107,9 +107,10 @@ section.home .text .links .button i {
 section.home .image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10px; /* Adjust the value as needed for rounded corners */
     border: 2px solid var(--text-color);
 }
+
 
 @media (max-width: 768px) {
     section.home .content {
@@ -205,6 +206,47 @@ section.home .image img {
     margin-right: 0.5rem;
 }
 
+.about {
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about .skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about .skills-list li {
+    font-size: 1rem;
+    background-color: var(--background-color);
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+}
 /* Keyframes for fadeIn animation */
 @keyframes fadeIn {
     from {
@@ -214,3 +256,13 @@ section.home .image img {
         opacity: 1;
     }
 }
+
+.image {
+    width: 400px; /* Adjust width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    border-radius: 10px; /* Slightly rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a sleek look */
+    border: 2px solid #ddd; /* Optional: Adds a border around the image */
+    display: block; /* Ensures proper alignment if necessary */
+    margin: 20px auto; /* Centers the image, adjust as needed */
+  }
